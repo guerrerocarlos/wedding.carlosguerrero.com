@@ -98,9 +98,9 @@
       function start() {
 
         $.get('https://gist.githubusercontent.com/guerrerocarlos/32e2385ca1e158ed33f36fa3dd04d881/raw/invitados.json?preventCache='+new Date(), function(data) {
-          console.log(data)
+          //console.log(data)
           var people = JSON.parse(data)
-          console.log(people)
+          //console.log(people)
           var texts = {
             'en': {
               'FromT': 'From:',
@@ -149,7 +149,7 @@
           $('#topinfo').html(texts[people[pos].language].FromT + ' ' + people[pos].from + '</br> '+texts[people[pos].language].To + ' '+name)
           $('#location').html(texts[people[pos].language].MapLocation)
           $('#content').html(texts[people[pos].language].text)
-          $('#auth').html(texts[people[pos].language].auth + ": " +number)
+          // $('#auth').html(texts[people[pos].language].auth + ": " +number)
         }
 
 
