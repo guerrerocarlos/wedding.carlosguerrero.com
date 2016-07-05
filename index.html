@@ -142,11 +142,14 @@
             console.log('using formal name')
             name = people[pos].formal_name
           }
+
+          var number = Object.keys(people).indexOf(pos)
+
           $('#name1').text(people[pos].greeting + ' '+people[pos].name)
           $('#topinfo').html(texts[people[pos].language].FromT + ' ' + people[pos].from + '</br> '+texts[people[pos].language].To + ' '+name)
           $('#location').html(texts[people[pos].language].MapLocation)
           $('#content').html(texts[people[pos].language].text)
-          $('#auth').html(texts[people[pos].language].auth + ": " +people[pos].num)
+          $('#auth').html(texts[people[pos].language].auth + ": " +number)
         }
 
 
@@ -266,7 +269,7 @@
           position: new google.maps.LatLng(50.4517928, 30.4864423)
         });
         infowindow = new google.maps.InfoWindow({
-          content: "<b>City Garden, 7pm</b><br/>Zolotoustivska St<br/> Kiev"
+          content: "<b>City Garden, 7pm</b><br/>20/07/2016</br>Zolotoustivska St<br/> Kiev"
         });
         google.maps.event.addListener(marker, "click", function() {
           infowindow.open(map, marker);
