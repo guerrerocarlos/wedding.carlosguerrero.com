@@ -150,20 +150,22 @@
           $('#location').html(texts[people[pos].language].MapLocation)
           $('#content').html(texts[people[pos].language].text)
           // $('#auth').html(texts[people[pos].language].auth + ": " +number)
+
+
+                  $("#flipbook").turn({
+                    width: 800,
+                    height: 400,
+                    autoCenter: true
+                  })
+                  $("#topinfo").fadeIn()
+                  $("#flipbook").delay( 800 ).fadeIn(2000)
+
+                  $("#location").delay( 6000 ).slideDown()
+                  $("#gmap_canvas").delay( 7000 ).slideDown(2000, init_map)
+                  $("#gmap_canvas2").delay( 9000 ).slideDown(2000, init_map)
         }
 
 
-        $("#flipbook").turn({
-          width: 800,
-          height: 400,
-          autoCenter: true
-        })
-        $("#topinfo").fadeIn()
-        $("#flipbook").delay( 800 ).fadeIn(2000)
-
-        $("#location").delay( 6000 ).slideDown()
-        $("#gmap_canvas").delay( 7000 ).slideDown(2000, init_map)
-        $("#gmap_canvas2").delay( 9000 ).slideDown(2000, init_map)
 
       });
 
